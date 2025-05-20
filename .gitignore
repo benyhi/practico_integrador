@@ -1,0 +1,43 @@
+# Global
+node_modules/
+dist/
+.env
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs
+logs/
+*.log
+
+# OS
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Editor config
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Coverage
+coverage/
+
+# Build outputs
+build/
+
+# React specific
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Node backend specific
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/tmp/

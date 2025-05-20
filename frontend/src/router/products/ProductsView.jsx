@@ -1,0 +1,1 @@
+// Vista de productos con componentes
