@@ -1,1 +1,9 @@
-// Enrutamiento de la aplicacion con React Router Dom
+import CreateModelPage from "../pages/CreateModelPage"
+const AppRouter = () => {
+    return (
+        <div>
+            <CreateModelPage/>
+        </div>
+    )
+} 
+export default AppRouter;
