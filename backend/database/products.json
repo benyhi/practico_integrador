@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "nombre": "Gaseosa Cola 500ml",
+    "precio": 250,
+    "stock": 85
+  },
+  {
+    "id": 2,
+    "nombre": "Agua Mineral Sin Gas 500ml",
+    "precio": 180,
+    "stock": 120
+  },
+  {
+    "id": 3,
+    "nombre": "Papas Fritas Pequeñas (Snack)",
+    "precio": 280,
+    "stock": 60
+  },
+  {
+    "id": 4,
+    "nombre": "Chocolate con Leche 25g",
+    "precio": 150,
+    "stock": 70
+  },
+  {
+    "id": 5,
+    "nombre": "Alfajor de Chocolate Simple",
+    "precio": 190,
+    "stock": 90
+  },
+  {
+    "id": 6,
+    "nombre": "Chicles Menta Paquete (x10 unidades)",
+    "precio": 120,
+    "stock": 150
+  },
+  {
+    "id": 7,
+    "nombre": "Galletitas de Agua Paquete Individual",
+    "precio": 220,
+    "stock": 50
+  },
+  {
+    "id": 8,
+    "nombre": "Jugo de Naranja en Caja 200ml",
+    "precio": 160,
+    "stock": 75
+  },
+  {
+    "id": 9,
+    "nombre": "Barra de Cereal Frutos Rojos",
+    "precio": 170,
+    "stock": 65
+  },
+  {
+    "id": 10,
+    "nombre": "Caramelos Ácidos Bolsa Pequeña",
+    "precio": 200,
+    "stock": 40
+  },
+  {
+    "id": 11,
+    "nombre": "Gaseosa Lima-Limón 500ml",
+    "precio": 250,
+    "stock": 80
+  },
+  {
+    "id": 12,
+    "nombre": "Turrón de Maní Clásico",
+    "precio": 130,
+    "stock": 100
+  },
+  {
+    "id": 13,
+    "nombre": "Encendedor",
+    "precio": 300,
+    "stock": 30
+  },
+  {
+    "id": 14,
+    "nombre": "Pañuelos Descartables",
+    "precio": 180,
+    "stock": 45
+  },
+  {
+    "id": 15,
+    "nombre": "Oblea Rellena de Vainilla",
+    "precio": 100,
+    "stock": 110
+  },
+  {
+    "id": 16,
+    "nombre": "Maní Salado Paquete 100g",
+    "precio": 230,
+    "stock": 55
+  },
+  {
+    "id": 17,
+    "nombre": "Gomitas Frutales Bolsa Pequeña",
+    "precio": 210,
+    "stock": 60
+  },
+  {
+    "id": 18,
+    "nombre": "Cigarrillos Paquete x20",
+    "precio": 850,
+    "stock": 25
+  },
+  {
+    "id": 19,
+    "nombre": "Bebida Energizante Lata 250ml",
+    "precio": 450,
+    "stock": 35
+  },
+  {
+    "id": 20,
+    "nombre": "Alfajor Triple de Dulce de Leche",
+    "precio": 280,
+    "stock": 70
+  }
+]

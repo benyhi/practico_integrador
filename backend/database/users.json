@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana Pérez",
+    "email": "ana.perez@example.com",
+    "edad": 28
+  },
+  {
+    "id": 2,
+    "nombre": "Juan García",
+    "email": "juan.garcia@example.com",
+    "edad": 35
+  },
+  {
+    "id": 3,
+    "nombre": "María Rodríguez",
+    "email": "maria.rodriguez@example.com",
+    "edad": 22
+  },
+  {
+    "id": 4,
+    "nombre": "Carlos López",
+    "email": "carlos.lopez@example.com",
+    "edad": 45
+  },
+  {
+    "id": 5,
+    "nombre": "Laura Martínez",
+    "email": "laura.martinez@example.com",
+    "edad": 31
+  },
+  {
+    "id": 6,
+    "nombre": "Pedro González",
+    "email": "pedro.gonzalez@example.com",
+    "edad": 50
+  },
+  {
+    "id": 7,
+    "nombre": "Sofía Sánchez",
+    "email": "sofia.sanchez@example.com",
+    "edad": 19
+  },
+  {
+    "id": 8,
+    "nombre": "Diego Fernández",
+    "email": "diego.fernandez@example.com",
+    "edad": 27
+  },
+  {
+    "id": 9,
+    "nombre": "Valentina Romero",
+    "email": "valentina.romero@example.com",
+    "edad": 38
+  },
+  {
+    "id": 10,
+    "nombre": "Lucas Torres",
+    "email": "lucas.torres@example.com",
+    "edad": 25
+  },
+  {
+    "id": 11,
+    "nombre": "Camila Díaz",
+    "email": "camila.diaz@example.com",
+    "edad": 29
+  },
+  {
+    "id": 12,
+    "nombre": "Mateo Vargas",
+    "email": "mateo.vargas@example.com",
+    "edad": 42
+  }
+]
