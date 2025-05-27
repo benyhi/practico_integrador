@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import ModelForm from '../../components/ModelForm';
 import ActionMenu from "../../components/ActionMenu";
 import ModelTable from "../../components/ModelTable";
+import { productService } from './services/ProductService';
 
 export default function ProductsView() {
     const [products, setProducts] = useState([]);
@@ -12,44 +12,60 @@ export default function ProductsView() {
 
     useEffect(() => {
         const fetchProducts = async () => {
-        axios.get('/products')
-            .then(response => {
-                //setProducts(response.data);
-                setProducts([
-                    {id: 1, name: 'Product 1', price: 100 },
-                    {id: 2, name: 'Product 2', price: 200 },
-                    {id: 3, name: 'Product 3', price: 300 },
-                    {id: 4, name: 'Product 4', price: 400 },
-                    {id: 5, name: 'Product 5', price: 500 },
-                    {id: 6, name: 'Product 6', price: 600 },
-                    {id: 7, name: 'Product 7', price: 700 },
-                    {id: 8, name: 'Product 8', price: 800 },
-                    {id: 9, name: 'Product 9', price: 900 },
-                    {id: 10, name: 'Product 10', price: 1000 }
-                ])
-            })
-            .catch(error => {
-                console.error('Error al obtener productos:', error);
-            });
+            try {
+                const data = await productService.getAll();
+                setProducts(data);
+            } catch (error) {
+                console.error(error.message);
+            }
         };
         fetchProducts();
     }, []);
 
     const handleAction = (action) => {
         if (action === 'create') {
-            setEditingProduct({ name: '', price: '' });
+            setEditingProduct({ nombre: '', precio: '' });
             setShowForm(true);
         }
         if (action === 'edit' && selectedProduct) {
             setEditingProduct(selectedProduct);
             setShowForm(true);
         }
+        if (action === 'delete' && selectedProduct) {
+            if (window.confirm(`¿Estás seguro que deseas eliminar "${selectedProduct.nombre}"?`)) {
+                productService.delete(selectedProduct.id)
+                    .then(() => {
+                        setProducts(products.filter(p => p.id !== selectedProduct.id));
+                        setSelectedProduct(null);
+                    })
+                    .catch(error => {
+                        console.error('Error al eliminar el producto:', error);
+                        alert(error.message);
+                    });
+            }
+        }
     };
 
-    const handleSubmit = (data) => {
-        console.log('Datos guardados:', data);
-        // Acá llamás a create o update según tenga `data.id`
+    const handleSubmit = async (data) => {
+        if (!data) return;
+
+        try {
+            if (data.id) {
+                const updatedProduct = await productService.update(data.id, data);
+                setProducts(products.map(p => (p.id === updatedProduct.id ? updatedProduct : p)));
+                setSelectedProduct(updatedProduct);
+            } else {
+                const newProduct = await productService.create(data);
+                setProducts([...products, newProduct]);
+                setSelectedProduct(newProduct);
+            }
+            setShowForm(false);
+        } catch (error) {
+            console.error('Error al guardar el producto:', error);
+            alert(error.message);
+        }
     };
+
 
     return (
         <div>
