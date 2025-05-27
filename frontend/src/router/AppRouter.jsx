@@ -1,4 +1,4 @@
-import ModelTable from '../components/ModelTable';
+import ProductsView from './products/ProductsView';
 
 const products = [
   { id: 1, name: 'Product 1', price: 100 },
@@ -16,8 +16,8 @@ const users = [
 const AppRouter = () => {
   return (
     <div>
-      <h1>App Router</h1>
-      <ModelTable data={products}/>
+      <h1>Practico Integrador Node + React</h1>
+      <ProductsView/>
     </div>
   );
 }
