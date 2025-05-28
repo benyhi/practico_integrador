@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import ModelForm from '../../components/ModelForm';
 import ActionMenu from "../../components/ActionMenu";
 import ModelTable from "../../components/ModelTable";
+import ExportarPDF from '../../components/ExportarPDF';
 import { productService } from './services/ProductService';
 
 export default function ProductsView() {
@@ -24,7 +25,7 @@ export default function ProductsView() {
 
     const handleAction = (action) => {
         if (action === 'create') {
-            setEditingProduct({ nombre: '', precio: '' });
+            setEditingProduct({ nombre: '', precio: '', stock: '' });
             setShowForm(true);
         }
         if (action === 'edit' && selectedProduct) {
@@ -43,6 +44,9 @@ export default function ProductsView() {
                         alert(error.message);
                     });
             }
+        }
+        if (action === 'export') {
+            ExportarPDF("Productos Exportados",["Nombre", "Precio", "Stock"], products.map(p => [p.nombre, p.precio, p.stock]) ,"productos.pdf");
         }
     };
 

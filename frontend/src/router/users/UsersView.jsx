@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import ModelForm from '../../components/ModelForm';
 import ActionMenu from "../../components/ActionMenu";
 import ModelTable from "../../components/ModelTable";
+import ExportarPDF from '../../components/ExportarPDF';
 import { userService } from './services/UserService';
 
 export default function UsersView() {
@@ -43,6 +44,9 @@ export default function UsersView() {
                         alert(error.message);
                     });
             }
+        }
+        if (action === 'export') {
+            ExportarPDF("Usuarios Exportados", ["Nombre", "Email", "Edad"], users.map(u => [u.nombre, u.email, u.edad]), "usuarios.pdf");
         }
     };
 
