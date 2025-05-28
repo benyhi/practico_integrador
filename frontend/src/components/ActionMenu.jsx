@@ -27,6 +27,12 @@ export default function ActionMenu({ onAction, selectedItem }) {
                 onClick={() => handleAction('delete')} 
                 disabled={!selectedItem}
             />
+            <Button
+                label="Exportar PDF"
+                icon="pi pi-file-pdf"
+                className="p-button-secondary"
+                onClick={() => handleAction('export')} 
+            />
         </div>
     );
 }

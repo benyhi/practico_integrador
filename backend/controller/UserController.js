@@ -1,4 +1,4 @@
-// Controladores de usuariosconst fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const filePath = path.join(__dirname, '../database/users.json');
